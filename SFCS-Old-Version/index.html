@@ -1,0 +1,277 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Smart Food Court System</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">  
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+
+<body>
+<header>
+	
+    <nav id="top-content">
+		<img class="logo-img" src="images/HCMUT_logo_1.png" alt="">
+        <div class="brand">BK Food Court</div>
+        <div class="content-nav-1">
+            <ul>
+                <li><a href="index.html">TRANG CHỦ</a></li>
+                <li><a href="#introduce-id">GIỚI THIỆU</a></li>
+                <li><a href="#menu-box-id">THỰC ĐƠN</a></li>
+                <li><a href="#introduce-id">LIÊN HỆ</a></li>
+            </ul>
+        </div>
+        <div class="content-nav-2">
+            <ul>
+                <li class="login"><a href="http://localhost:8080/SFCS/login">Login</a></li>
+                <li class="register"><a href="http://localhost:8080/SFCS/register">Register</a></li>
+            </ul>
+        </div>
+        <button id="account"><img class="account-img" src="images/person.png" alt=""></button> 
+        <!-- The Modal -->
+        <button id="cart" data-toggle="modal" data-target="#myModal" position="fixed" z-index="999"><img class="cart-img" src="images/supermarket.png" alt=""></button>
+        <div id="myModal" class="modal" data-backdrop="static" data-keyboard="false">
+            <div class="model-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">GIỎ HÀNG</h5>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="cart-row">
+                            <span class="cart-item cart-header cart-column">Món ăn</span>
+                            <span class="cart-price cart-header cart-column">Đơn giá</span>
+                            <span class="cart-quantity cart-header cart-column">Số lượng</span>
+                        </div>
+                        <div class="cart-items">
+
+                        </div>
+                        <div class="cart-total">
+                            <strong class="cart-total-title">Tổng cộng:</strong>
+                            <span class="cart-total-price">0VNĐ</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary close-footer" data-dismiss="modal">Đóng</button>
+                        <button type="button" class="btn btn-primary order">Thanh toán</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="welcome">Chào mừng đến với BK Food Court</div>
+        <div class="search-box">
+            <form>
+                <input class="form-control" placeholder="Tìm kiếm sản phẩm..." type="text">
+                <button class="btn btn-link search-btn"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+	</nav>
+	
+</header>  
+
+<!-- Start About -->
+<section class="about-section">
+    <div class="inner-column">
+        <h1>Giới thiệu</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor suscipit feugiat. Ut at pellentesque ante, sed convallis arcu. Nullam facilisis, eros in eleifend luctus, odio ante sodales augue, eget lacinia lectus erat et sem. </p>
+        <p>Sed semper orci sit amet porta placerat. Etiam quis finibus eros. Sed aliquam metus lorem, a pellentesque tellus pretium a. Nulla placerat elit in justo vestibulum, et maximus sem pulvinar.</p>
+        <a class="next" href="about_us.html">Xem tiếp</a>
+    </div>
+    <div><img class="img-fluid-about" src="images/about.png" alt=""></div>
+</section>
+<!-- End About -->
+
+<!-- Start QT -->
+<section class="qt-box qt-background">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 ml-auto mr-auto text-center">
+                <p class="lead ">" Tinh hoa ẩm thực - con người Việt Nam "</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End QT -->
+
+<!-- Start Menu -->
+<section class="menu-box" id="menu-box-id">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="heading-title text-center"><h2>Thực Đơn Đặc Biệt</h2></div>
+			</div>
+		</div>
+		<div class="row inner-menu-box">
+			<div class="col-3">
+				<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+					<a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Tất cả</a>
+					<a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Đồ uống</a>
+					<a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Bữa trưa</a>
+					<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Bữa tối</a>
+				</div>
+			</div>	
+			<div class="col-9">
+				<div class="tab-content" id="v-pills-tabContent">
+					<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+						<div class="row">
+							<div class="col-lg-4 col-md-6 special-grid drinks">
+								<div class="gallery-single fix">
+									<img class="img-fluid" src="images/suatuoitranchau.jpg" alt="">
+									<div class="why-text">
+										<h4 class="content-product-h3">SỮA TƯƠI TRÂN CHÂU ĐƯỜNG ĐEN</h4>
+										<p class="sub-title">The Alley</p>
+										<button type="button" class="btn btn-cart">Thêm vào giỏ</button>
+                                        <h5 class="price">60,000đ</h5>
+									</div>
+								</div>
+							</div>			
+							<div class="col-lg-4 col-md-6 special-grid drinks">
+								<div class="gallery-single fix">
+									<img class="img-fluid" src="images/trasuaphuclong.jpg" alt="">
+									<div class="why-text">
+										<h4 class="content-product-h3">TRÀ SỮA PHÚC LONG</h4>
+										<p class="sub-title">Phúc Long</p>
+										<button type="button" class="btn btn-cart">Thêm vào giỏ</button>
+										<h5 class="price">45,000đ</h5>
+									</div>
+								</div>
+							</div>	
+							<div class="col-lg-4 col-md-6 special-grid drinks">
+								<div class="gallery-single fix">
+									<img class="img-fluid" src="images/tradaocamsa.jpg" alt="">
+									<div class="why-text">
+										<h4 class="content-product-h3">TRÀ ĐÀO CAM SẢ</h4>
+										<p class="sub-title">An Tea & Coffee</p>
+										<button type="button" class="btn btn-cart">Thêm vào giỏ</button>
+										<h5 class="price">20,000đ</h5>
+									</div>
+								</div>
+							</div>			
+							<div class="col-lg-4 col-md-6 special-grid lunch">
+								<div class="gallery-single fix">
+									<img class="img-fluid" src="images/hamburger.jpg" alt="">
+									<div class="why-text">
+										<h4 class="content-product-h3">HAMBURGER THỊT HEO</h4>
+										<p class="sub-title">McDonal's</p>
+										<button type="button" class="btn btn-cart">Thêm vào giỏ</button>
+										<h5 class="price">30,000đ</h5>
+									</div>
+								</div>
+							</div>		
+							<div class="col-lg-4 col-md-6 special-grid lunch">
+								<div class="gallery-single fix">
+									<img class="img-fluid" src="images/comchien.jpg" alt="">
+									<div class="why-text">
+										<h4 class="content-product-h3">CƠM CHIÊN DƯƠNG CHÂU</h4>
+										<p class="sub-title">Cơm Nguyên Ký</p>
+										<button type="button" class="btn btn-cart">Thêm vào giỏ</button>
+                                        <h5 class="price">20,000đ</h5>
+									</div>
+								</div>
+							</div>	
+							<div class="col-lg-4 col-md-6 special-grid lunch">
+								<div class="gallery-single fix">
+									<img class="img-fluid" src="images/bunthitnuong.jpg" alt="">
+									<div class="why-text">
+										<h4 class="content-product-h3">BÚN THỊT NƯỚNG</h4>
+										<p class="sub-title">Toà A11</p>
+										<button type="button" class="btn btn-cart">Thêm vào giỏ</button>
+										<h5 class="price">25,000đ</h5>
+									</div>
+								</div>
+							</div>		
+				    		<div class="col-lg-4 col-md-6 special-grid dinner">
+									<div class="gallery-single fix">
+										<img class="img-fluid" src="images/banhbao.jpg" alt="">
+										<div class="why-text">
+											<h4 class="content-product-h3">BÁNH BAO NHÂN THỊT</h4>
+											<p class="sub-title">Circle K</p>
+											<button type="button" class="btn btn-cart">Thêm vào giỏ</button>
+											<h5 class="price">15,000đ</h5>
+										</div>
+									</div>
+								</div>						
+							<div class="col-lg-4 col-md-6 special-grid dinner">
+								<div class="gallery-single fix">
+									<img class="img-fluid" src="images/banhmi.png" alt="">
+									<div class="why-text">
+										<h4 class="content-product-h3">BÁNH MÌ NHÂN THỊT</h4>
+										<p class="sub-title">Bánh mì Cô Ba</p>
+										<button type="button" class="btn btn-cart">Thêm vào giỏ</button>
+										<h5 class="price">15,000đ</h5>
+									</div>
+								</div>
+							</div>				
+							<div class="col-lg-4 col-md-6 special-grid dinner">
+								<div class="gallery-single fix">
+									<img class="img-fluid" src="images/phobo.png" alt="">
+									<div class="why-text">
+										<h4 class="content-product-h3">PHỞ BÒ</h4>
+										<p class="sub-title">Phở 10 Lý Quốc Sư</p>
+										<button type="button" class="btn btn-cart">Thêm vào giỏ</button>
+										<h5 class="price">40,000đ</h5>
+									</div>
+			    				</div>
+							</div>
+						</div>				
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+</section>
+<!-- End Menu -->
+<!-- Start Footer -->
+<footer class="footer-area bg-f" id="introduce-id">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-md-6">
+                <h3>Giới thiệu</h3>
+                <p>Integer cursus scelerisque ipsum id efficitur. Donec a dui fringilla, gravida lorem ac, semper magna. Aenean rhoncus ac lectus a interdum. Vivamus semper posuere dui.</p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+				<h3>Thông tin liên lạc</h3>
+				<p>Cơ sở Dĩ An, Đại học Bách Khoa Tp. Hồ Chí Minh, Quận Thủ Đức, Tp. Hồ Chí Minh</p>
+				<p><a href="#">+84 123 456 789</a></p>
+				<p><a href="#"> bkfoodcourt@gmail.com</a></p>
+			</div>
+		    <div class="col-lg-3 col-md-6">
+				<h3>Mạng xã hội</h3>
+				<ul class="list-inline f-social">
+					<li class="list-inline-item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li class="list-inline-item"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+					<li class="list-inline-item"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+					<li class="list-inline-item"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<h3>Thời gian mở cửa</h3>
+				<p><span class="text-color">Thứ 2 - Chủ Nhật: </span> 9AM - 8PM</p>
+			</div>
+		</div>
+	</div>
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+				    <p class="company-name">All Rights Reserved. &copy; 2020 <a href="#">BK Food Court</a>
+				</div>
+			</div>
+		</div>
+	</div>	
+</footer>
+<!-- End Footer -->
+<a href="#top-content" id="back-to-top" title="Back to top"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>
+<script src="js/main.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/scroll.js"></script>
+</body>
+</html>
